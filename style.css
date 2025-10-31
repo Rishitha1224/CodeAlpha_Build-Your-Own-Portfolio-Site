@@ -1,0 +1,112 @@
+/* .inf{
+    width: 100%; 
+    margin-left: 100%; 
+    animation: slideIn 2s forwards; 
+}
+
+@keyframes slideIn { 
+from {
+    margin-left: 100%;
+} 
+to {
+    margin-left: 0%;
+} 
+} */
+ /* General page styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f8f9fc;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+header img {
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Sections */
+section {
+    background: white;
+    width: 80%;
+    margin: 30px auto;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #2575fc;
+    border-bottom: 2px solid #6a11cb;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Lists */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+footer a {
+    color: #6a11cb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #9b5de5;
+}
+
+footer h3 {
+    margin-top: 20px;
+    font-weight: normal;
+    color: #ccc;
+}
+
+/* Responsive De*
