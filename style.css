@@ -1,4 +1,4 @@
-/* .inf{
+.inf{
     width: 100%; 
     margin-left: 100%; 
     animation: slideIn 2s forwards; 
@@ -11,8 +11,7 @@ from {
 to {
     margin-left: 0%;
 } 
-} */
- /* General page styling */
+}
 body {
     font-family: 'Poppins', sans-serif;
     background: #f8f9fc;
@@ -24,7 +23,7 @@ body {
 
 /* Header Section */
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #3dcfdf, #7ce9c4);
     color: white;
     text-align: center;
     padding: 50px 20px;
@@ -65,7 +64,7 @@ section:hover {
 }
 
 section h2 {
-    color: #2575fc;
+    color: #31bac9;
     border-bottom: 2px solid #6a11cb;
     display: inline-block;
     margin-bottom: 10px;
@@ -93,14 +92,14 @@ footer {
 }
 
 footer a {
-    color: #6a11cb;
+    color: #53d1f1;
     text-decoration: none;
     font-weight: bold;
 }
 
 footer a:hover {
     text-decoration: underline;
-    color: #9b5de5;
+    color: #258da7;
 }
 
 footer h3 {
