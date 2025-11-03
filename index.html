@@ -8,43 +8,83 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <h1 class="inf">I am Rishitha R</h1>
         <p>I love to learn</p>
         <img src="./documents/pass.jpg" alt="Passport photo" height="150px" width="130px">
+    </header> -->
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+    <h2 class="logo">Rishitha<span>R</span></h2>
+    <ul class="nav-links">
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#hobbies">Hobbies</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <!-- Header -->
+    <header class="intro">
+    <h1 class="slide-in">Hi, I'm <span>Rishitha R</span></h1>
+    <p>I love to learn and build creative things!</p>
+    <img src="./documents/pass.jpg" alt="Passport Photo" height="160" width="130" />
     </header>
 
-    <section>
-        <ul><h2>Education</h2>
+    <!-- Education -->
+    <section id="Education" class="reveal">
+        <h2>🎓 Education</h2>
+        <ul>
             <li><b>10th Class :</b> 98%</li>
             <li><b>12th Class :</b> 89%</li>
             <li><b>Bachelor in Engineering :</b> 8.6 cgpa</li>
         </ul>
     </section>
 
-    <section>
-        <ul><h2>Skills</h2>
+    <!-- Skills -->
+    <section id="skills" class="reveal">
+        <h2>💻 Skills</h2>
+        <ul>
             <li>HTML,CSS,JavaScript</li>
             <li>Nodejs, SQL</li>
             <li>Java, Python</li>
         </ul>
     </section>
 
-    <section>
-        <ul><h2>Hobbies</h2>
+    <!-- Hobbies -->
+    <section id="Hobbies" class="reveal">
+        <h2>🎨 Hobbies</h2>
+        <ul>
             <li>Reading</li>
-            <li>creating crafts</li>
-            <li>panting and drawing</li>
+            <li>Creating crafts</li>
+            <li>Panting and drawing</li>
         </ul>
     </section>
 
-    <footer>
-        <ul>
-            <h2>Contact Me</h2>
-            <li><b>E-mail :</b> ravishrishitha@gamil.com</li>
-            <li><a href="https://www.linkedin.com/in/rishitha-r-4762a32a1/?originalSubdomain=in">LinkedIn profile</a></li>
-        </ul>
+    <!-- footer -->
+    <footer id="content">
+        <h2>Contact Me</h2>
+        <p><b>E-mail :</b> <a href="mailto:ravishrishitha@gamil.com">ravishrishitha@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/rishitha-r-4762a32a1/?originalSubdomain=in">LinkedIn profile</a></p>
         <h3>Made with &hearts; by me</h3>
     </footer>
+    <script>
+    // Reveal animations on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    window.addEventListener('scroll', () => {
+        reveals.forEach(r => {
+        const rect = r.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 100) r.classList.add('active');
+        });
+    });
+
+    // Theme toggle
+    const toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        toggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙';
+    });
+    </script>
 </body>
 </html>
