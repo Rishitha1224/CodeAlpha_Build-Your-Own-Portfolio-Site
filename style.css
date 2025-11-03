@@ -1,3 +1,15 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #3dcfdf;
+    padding: 15px 50px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
 .inf{
     width: 100%; 
     margin-left: 100%; 
@@ -17,10 +29,27 @@ body {
     background: #f8f9fc;
     color: #333;
     margin: 0;
-    padding: 0;
-    line-height: 1.6;
+    transition: 0.4s, color 0.4s;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
+.nav-links a:hover {
+    color: #043f47;
+}
 /* Header Section */
 header {
     background: linear-gradient(135deg, #3dcfdf, #7ce9c4);
@@ -41,9 +70,19 @@ header p {
     margin-bottom: 20px;
 }
 
+.intro {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #3dcfdf, #7ce9c4);
+    color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+}
+
 header img {
     border-radius: 10px;
     border: 3px solid white;
+    margin-top: 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -52,10 +91,17 @@ section {
     background: white;
     width: 80%;
     margin: 30px auto;
-    padding: 20px 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    padding:30px;
+    border-radius: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0.8s ease;
+}
+
+section.active {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 section:hover {
@@ -65,9 +111,9 @@ section:hover {
 
 section h2 {
     color: #31bac9;
-    border-bottom: 2px solid #6a11cb;
+    border-bottom: 3px solid #6a11cb;
     display: inline-block;
-    margin-bottom: 10px;
+    padding: 5px;
 }
 
 /* Lists */
@@ -108,4 +154,62 @@ footer h3 {
     color: #ccc;
 }
 
-/* Responsive De*
+#theme-toggle {
+    background: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Skill Bars */
+.skill {
+    margin: 15px 0;
+}
+.bar {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 10px;
+}
+
+.fill {
+    background: linear-gradient(90deg, #3dcfdf, #7ce9c4);
+    height: 100%;
+    width: 0;
+    animation: fillAnimation 2s forwards;
+}
+
+@keyframes fillAnimation {
+to {
+        width: var(--fill, 90%);
+    }
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+    color: #f8f9fc;
+}
+
+body.dark section {
+    background: #1f1f1f;
+}
+
+body.dark footer {
+    background: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+.nav-links {
+    display: none;
+}
+.navbar {
+    flex-wrap: wrap;
+}
+section {
+    width: 90%;
+}
+}
